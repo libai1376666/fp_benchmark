@@ -271,7 +271,7 @@ class DDPBenchmark(MatMulBenchmark):
         return total_flops / elapsed_s / 1e12
 def main():
     parser = argparse.ArgumentParser(description="Matrix Multiply Benchmark (OOP)")
-    parser.add_argument('--size',  type=int,   default=1024 * 8,
+    parser.add_argument('--size',  type=int,   default=1024 * 4,
                         help='矩阵维度 N (测试 N×N)')
     parser.add_argument('--iters', type=int,   default=100,
                         help='迭代次数')
@@ -279,7 +279,7 @@ def main():
                         default=['fp32', 'fp16'],
                         choices=['fp32', 'fp64', 'fp16', 'bf16'],
                         help='要测试的数据类型')
-    parser.add_argument('--device', type=str, default='cuda',
+    parser.add_argument('--device', type=str, default='cpu',
                         help='测试设备：cpu, cuda, ...')
     parser.add_argument('--gpu_ids',   type=str, default='0',
                         help='调用的GPU id 列表，逗号分隔，如 "0" 或 "0,1,2", 当填入1个时, 表示测试单卡性能')
