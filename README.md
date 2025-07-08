@@ -53,10 +53,11 @@ add_argument('--threads', type=int, default=None,
 
 单位统一为`TFLOPS`
 
-| Device                  | FP32/TF32 | FP16 |
-|-------------------------| --- | --- |
-| Nvidia RTX 4070Ti Super | 46.63 | 92.34 |
-| Nvidia RTX 3060 12G     | 13.13 | 25.84 |
-| Nvidia RTX 4090 24G     | 88.20 | 160.52 |
-| AMD Ryzen 5900X         | 1.07 | N/A |
-| NVIDIA Tesla V100 32GB   |  9.00    | 20.10 |
+| Device                         | FP32/TF32 | FP16 |
+|--------------------------------|---------|------|
+| Nvidia RTX 4070Ti Super        | 46.63   | 92.34 |
+| Nvidia RTX 3060 12G            | 13.13   | 25.84 |
+| Nvidia RTX 4090 24G            | 88.20   | 160.52 |
+| AMD Ryzen 5900X                | 1.07    | N/A  |
+| NVIDIA Tesla V100-SXM2-16GB    | 14.22   | 95.97 |
+| NVIDIA A100 80GB PCIe    | 109.25       | 232.03     |
